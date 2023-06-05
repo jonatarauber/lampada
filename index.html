@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste JavaScript</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        
+        h1 {
+            color: black;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 35pt;
+        }
+        div{
+            text-align: center;
+            display: flex;
+            padding: 0px;
+            width: 180px;
+            height: 190px;
+            margin: auto;
+        }
+        img{
+            width: 500px;
+            height: 250px;
+            padding: 0px;
+        }
+    </style>
+    <script>
+        var quebrada = false;
+        function mudalampada(tipo){
+            if(!quebrada){
+                document.getElementById("luz").src = "./imagem/" + tipo + ".png"
+                
+        
+                if(tipo=='lampada-quebrada')
+                    quebrada=true
+                    
+                }
+                    
+                
+            }            
+    </script>
+</head>
+<body>
+    <h1>Acende lampada</h1>
+    <div>
+    <img src="./imagem/lampada-apagada.png" alt="lampada apagada" id="luz" onmousemove="mudalampada('lampada-acesa')" onmouseout="mudalampada('lampada-apagada')" onclick="mudalampada('lampada-quebrada')">
+    </div>
+</body>
+</html>
