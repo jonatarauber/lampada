@@ -7,11 +7,11 @@
     <title>Teste JavaScript</title>
     <style>
         body{
-            background-color: white;
+            background: black;
         }
         
         h1 {
-            color: black;
+            color: white;
             text-align: center;
             font-family: sans-serif;
             font-size: 35pt;
@@ -35,11 +35,16 @@
         function mudalampada(tipo){
             if(!quebrada){
                 document.getElementById("luz").src = "./imagem/" + tipo + ".png"
-                
-        
+                if(tipo == 'lampada-acesa'){
+                    document.body.style.background='#ffffff'
+                }else if(tipo == 'lampada-apagada'){
+                    document.body.style.background='#000000'
+                }else if(tipo == 'lampada-quebrada'){
+                    document.body.style.background='#000000'
+                }
                 if(tipo=='lampada-quebrada')
+                
                     quebrada=true
-                    
                 }
                     
                 
